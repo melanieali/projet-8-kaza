@@ -1,1 +1,487 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: auto;
+    max-width: 1024px;
+}
 
+/****************BANNER*************/
+.kaza-banner{
+    position: relative;
+}
+.kaza-img {
+    width: 84%;
+    height: 225px;
+    margin-left: 80px;
+    margin-right: 80px;
+    position: relative;
+    border-radius: 25px;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+.titre {
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+    margin: 0px;
+    color: white;
+    font-size: 45px;
+    font-weight: 500;
+    position: absolute;
+    overflow: auto;
+    text-align: center;
+}
+
+/****************PAGE ACCUEIL CARD**************/
+#card {
+    background: #F6F6F6;
+    margin-top: 50px;
+    border-radius: 25px;
+    margin-left: 80px;
+    margin-right: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content:space-between;
+    padding-top: 40px;
+}
+.logement-image {
+    max-width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+.logement {
+    text-align: center;
+    position: relative;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.logement-titre {
+    font-size: 15px;
+    color: white;
+    z-index: 3;
+    position: absolute;
+    bottom: 2px;
+    left: 10px;
+}
+
+/***************DROPDOWN PAGE APROPOS*************/
+.dropdownContener{
+    background-color: #FF6060;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 60px;
+    border-radius: 5px;
+}
+.dropdownTitle {
+    color: #F6F6F6;
+    font-size: 24px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 20px
+}
+.dropdownDescription {
+   background-color: #F6F6F6;
+   font-size: 13px;
+   color: #FF6060;
+}
+
+/***************CARROUSSEL PAGE LOGEMENT**********/
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 930px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 25px;
+}
+.carousel-content {
+    display: flex;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+.slide { 
+    flex: 0 0 100%;
+    display: none;
+    height: 415px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+.slide.active {
+    display: block;
+}
+.pSlide {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 70px;
+    color: white;
+    transition: color 0.2s ease-in-out;
+}
+.nSlide{
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 70px;
+    color: white;
+    transition: color 0.2s ease-in-out;
+}
+button:first-child {
+    left: 15px;
+}
+button:last-child {
+    right: 15px;
+}
+.img-carousel {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slide-number {
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+}
+
+/***************PAGE LOGEMENT*************/
+.titreLocationandTags {
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start;
+    margin-left: 20px; 
+}
+.titrelogement {
+    margin-bottom: 1px;
+    color: #FF6060; 
+    display: flex;
+    font-size: 25px;
+}
+.location {
+    margin-bottom: 15px;
+    color: #FF6060;
+    font-size: 15px; 
+    margin-bottom: 25px;
+}
+.tag {
+    display: inline-block;
+    margin-right: 30px;
+    background-color: #FF6060;
+    color: white;
+    padding: 6px 30px; 
+    border-radius: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.presentation {
+    display: flex;
+    justify-content: space-between;
+}
+.host{
+    display: flex;
+    align-items: center;
+}
+.hostAndRating{
+    margin-right: 20px;
+}
+.name{
+    margin-right: 15px;
+    font-size: 18px;
+    color: #FF6060;
+}
+.hostpicture {
+    border-radius: 100px;
+    width: 64px;
+}
+.star {
+    color: #FF6060; 
+    padding-right: 0px;
+    margin-top: 10px ; 
+    font-size: 20px;
+}
+.star.empty {
+    color: #ccc; 
+}
+
+/**************DROPDOWN PAGE LOGEMENT**********/
+.dropdownContenerLogement{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.dropdownTitle1{
+    margin-right: 50px;
+    margin-left: 15px;
+    width: 440px;
+    height: 80px;
+    background-color: #FF6060;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+}
+.dropdownTitle2 {
+    margin-right: 15px;
+    width:440px;
+    height: 80px;
+    background-color: #FF6060;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+}
+.titleandIcon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.up1,.down1  {
+    width: 32px;
+}
+.dropdownDescription1,.dropdownEquipement{
+    display: flex;
+    flex-direction: column;
+    background-color: #F6F6F6;
+    color: #FF6060;
+    font-size: 18px ;
+}
+
+/*****************FOOTER**************/
+#footer {
+    margin-top: 100px;
+    background-color: black;
+    padding-top: 60px;
+    padding-bottom: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-logo{
+    width: 122px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-title {
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 24px;
+    padding-top: 20px;
+}
+
+/*****************PAGE ERROR*************/
+.number-error {
+    color: #FF6060;
+    font-size: 340px;
+    text-align: center;
+    margin-top: -15px;
+    margin-bottom: 80px;
+}
+.msg-error {
+    font-size: 38px;
+    text-align: center;
+    color: #FF6060;
+    margin-bottom: 150px;
+}
+.linkacc {
+    color: #FF6060;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+/**************MEDIA QUERIES*************/
+@media screen and (max-width: 768px) {
+    
+    /*********BANNER********/
+    .kaza-img {
+        width: 89%;
+        height: 110px;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 10px;
+    }
+    .titre {
+        font-size: 24px;
+        text-align: left;
+        width: 280px;
+    }
+
+    /************PAGE ACCUEIL CARD*********/
+    #card {
+        background:none;
+        margin-top: 0;
+        margin-left: 20px;
+        margin-right: 20px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content:space-between;
+    }
+    .logement-image {
+        width: 100%;
+        height: 250px;
+        border-radius: 10px;
+    }    
+    .logement {
+        text-align: center;
+        position: relative;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: -10px;
+    }
+
+    /***********DROPDOWN PAGE APROPOS************/
+    .dropdownContener {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    .dropdownTitle h2 {
+        margin-right: 190px;
+    }
+    .dropdownTitle {
+        font-size: 12px;
+        margin-left: 15px;
+        margin-bottom: 20px;
+    }
+
+    /*************CARROUSSEL PAGE LOGEMENT***********/
+    .carousel {
+        max-width: 345px;
+        border-radius: 10px;
+    }
+    .slide{
+        height: 255px;
+    }
+    .pSlide,.nSlide {
+        font-size: 24px;
+    }
+    button:first-child {
+        left: 5px;
+    }
+    button:last-child {
+        right: 5px;
+    }
+    .slide-number{
+        display: none;
+    }
+
+    /*************PAGE LOGEMENT***********/
+    .presentation {
+        display: flex;
+        flex-direction: column;
+    }
+    .titreLocationandTags {
+        display: flex; 
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+    .titrelogement{
+        margin-left: -25px;
+        margin-bottom: 0;
+        font-size: 17px;
+    }
+    .location{
+        margin-left: -3px;
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+    .tag {
+        margin-left: -3px;
+        margin-right: 10px;
+        font-size: 10px;
+        padding: 6px 15px;
+    }
+    .hostAndRating{
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 5px;
+        margin-top: -10px;
+        margin-left: 20px;
+    }
+    .star{
+        font-size: 10px;
+    }
+    .rating .star{
+        flex-direction: row;
+    }
+    .name{
+        font-size: 12px;
+        margin-right: 10px;
+    }
+    .hostpicture{
+        width: 32px;
+    }
+    .host {
+        margin-left: 110px;
+    }
+
+    /***********DROPDOWN PAGE LOGEMENT************/
+    .dropdownContenerLogement{
+        flex-direction: column;
+        font-size: 10px;
+        border-radius: 5px;
+    }
+    .dropdownTitle1{
+        width: 340px;
+        height: auto;
+        font-size: 12px;
+        margin-bottom: 20px;
+        margin-top: -20px;
+    }
+    .dropdownTitle2{
+        width: 340px;
+        height: auto;
+        font-size: 12px;
+        margin-left: 15px;
+    }
+    .dropdownDescription1,.dropdownEquipement{
+        font-size: 13px;
+    }
+
+    /***********FOOTER***********/
+    #footer {
+        margin-top: 0;
+    }
+
+    /************PAGE ERROR********/
+    .number-error {
+        font-size: 96px;
+        margin-top: 100px;
+    }
+    .msg-error {
+        font-size: 16px;
+    }
+    .linkacc {
+        font-size: 14px;
+        margin-bottom: 100px;
+    }
+}
