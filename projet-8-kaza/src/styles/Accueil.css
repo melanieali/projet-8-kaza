@@ -227,46 +227,32 @@ button:last-child {
 }
 
 /**************DROPDOWN PAGE LOGEMENT**********/
-.dropdownContenerLogement{
+.dropdownContener1{
     display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: -30px;
 }
-.dropdownTitle1{
-    margin-right: 50px;
-    margin-left: 15px;
-    width: 440px;
-    height: 80px;
-    background-color: #FF6060;
+.dropdownDescription1 + .dropdownEquipement {
+    margin-left: -90px;
+}
+.logementDropdown{
     border-radius: 10px;
-    color: white;
-    font-size: 18px;
+    margin-bottom: -30px;
 }
-.dropdownTitle2 {
-    margin-right: 15px;
-    width:440px;
-    height: 80px;
-    background-color: #FF6060;
-    border-radius: 10px;
-    color: white;
+.logementDropdown>.dropdownTitle{
     font-size: 18px;
-}
-.titleandIcon {
     display: flex;
-    align-items: center;
+    align-items: center; 
     justify-content: space-between;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 60px;
+    width: 390px;
 }
-.up1,.down1  {
-    width: 32px;
-}
-.dropdownDescription1,.dropdownEquipement{
-    display: flex;
-    flex-direction: column;
-    background-color: #F6F6F6;
-    color: #FF6060;
-    font-size: 18px ;
+.logementDropdown>.dropdownDescription{
+    font-size: 18px;
 }
 
 /*****************FOOTER**************/
@@ -445,26 +431,28 @@ button:last-child {
     }
 
     /***********DROPDOWN PAGE LOGEMENT************/
-    .dropdownContenerLogement{
+    .dropdownContener1{
         flex-direction: column;
-        font-size: 10px;
+        margin-left: -5px;
+        margin-right: 5px;
+        margin-top: -20px;
+    
+    }
+    .logementDropdown{
+        margin-bottom: -15px;
         border-radius: 5px;
     }
-    .dropdownTitle1{
-        width: 340px;
-        height: auto;
-        font-size: 12px;
-        margin-bottom: 20px;
-        margin-top: -20px;
-    }
-    .dropdownTitle2{
-        width: 340px;
-        height: auto;
-        font-size: 12px;
-        margin-left: 15px;
-    }
-    .dropdownDescription1,.dropdownEquipement{
+    .logementDropdown>.dropdownTitle{
         font-size: 13px;
+        margin-left: 10px;
+        width: 80px;
+        height: 40px;
+    }
+    .logementDropdown>.dropdownDescription{
+        font-size: 13px;
+    }
+    .dropdownDescription1 + .dropdownEquipement {
+        margin-left: 0px;
     }
 
     /***********FOOTER***********/

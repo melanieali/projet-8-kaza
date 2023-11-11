@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp,faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
-const Dropdown = ({titre, contenu}) => {
+const Dropdown = ({titre, contenu, customStyle}) => {
     const [isOpen, setisOpen] = useState(false);
 
     const showDropdown = () => {
@@ -10,7 +10,7 @@ const Dropdown = ({titre, contenu}) => {
     }
 
     return (
-        <div className="dropdownContener">
+        <div className={`dropdownContener ${customStyle}`}>
             <div className="dropdownTitle">
                 <h2>{titre}</h2>
                 <div onClick={showDropdown}>

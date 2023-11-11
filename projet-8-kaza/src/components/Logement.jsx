@@ -1,10 +1,10 @@
 import React from "react";
 import { useParams, Navigate } from "react-router-dom";
 import logement from '../datas/listeLogements.json';
-import Dropdownlogement from "./Dropdownlogement";
+import Dropdown from './Dropdown';
 import Carroussel from "../components/Carroussel";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar} from '@fortawesome/free-solid-svg-icons';
 
 
 const renderRatingStars = (rating) => {
@@ -56,8 +56,13 @@ const Logement = () => {
 
                 </div>
             </div>
-            <div className="dropdownlogement">
-            <Dropdownlogement description={description} equipments={equipments}/>
+            <div className="dropdownContener1">
+                <div className="dropdownDescription1">
+                    <Dropdown titre="Description" contenu={description} customStyle="logementDropdown" />
+                </div>
+                <div className="dropdownEquipement">
+                    <Dropdown titre="Equipements" contenu={equipments} customStyle="logementDropdown"/>
+                </div>
             </div>
         </div>
         
