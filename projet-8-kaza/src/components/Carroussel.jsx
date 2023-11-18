@@ -16,9 +16,11 @@ const Carroussel = ({ data }) => {
 
   return (
     <div className="carousel">
+      {data.pictures.length > 1 ? (
       <button className='pSlide' onClick={prevSlide}>
         <FontAwesomeIcon icon={faChevronLeft} />
       </button>
+      ):''}
       <div className="carousel-content">
         {data.pictures.map((pictures,index) => (
           <div
@@ -29,9 +31,11 @@ const Carroussel = ({ data }) => {
           </div>
         ))}
       </div>
+      {data.pictures.length > 1 ? (
       <button className='nSlide' onClick={nextSlide}>
         <FontAwesomeIcon icon={faChevronRight} />
       </button>
+      ):''}
       <div className='slide-number'>
         {currentIndex +1}/{data.pictures.length}
       </div>

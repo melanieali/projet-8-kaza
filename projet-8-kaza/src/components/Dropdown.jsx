@@ -8,7 +8,7 @@ const Dropdown = ({titre, contenu, customStyle}) => {
     const showDropdown = () => {
         setisOpen(!isOpen);
     }
-
+    console.log(contenu);
     return (
         <div className={`dropdownContener ${customStyle}`}>
             <div className="dropdownTitle">
@@ -22,7 +22,19 @@ const Dropdown = ({titre, contenu, customStyle}) => {
                 </div>
             </div>
             <div className="dropdownDescription">
-                   {isOpen && <p>{contenu}</p>}             
+            {isOpen && (
+                <div>
+                    {Array.isArray(contenu) ? (
+                        <ul>
+                            {contenu.map((item, index) => (
+                            <li key={index}>{item}</li>
+                            ))}
+                        </ul>
+                    ) : (
+                        <p>{contenu}</p>
+                    )}
+                </div>
+            )}             
             </div>
         </div>
     );

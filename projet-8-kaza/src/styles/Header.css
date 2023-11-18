@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+
 #header {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 #lien {
     display:flex;
     justify-content: flex-end;
     margin-top: -50px;
     margin-bottom: 80px;
+    font-family: 'Montserrat';
 }
 .img-logo {
     margin-top: 50px;
@@ -17,8 +21,7 @@
     font-size: 26px;
     color: #FF6060;
     text-decoration: none;
-    margin-right: 40px;
-    margin-left: 50px;
+    margin-left: 20px;
 }
 .nav-active {
     text-decoration: underline;
@@ -27,13 +30,12 @@
 /***********MEDIA QUERIES************/
 @media screen and (max-width:768px) {
     #header{
-        margin-left: 5px;
-        margin-right: 5px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
     .img-logo {
         width: 145px;
         height: 46px;
-        margin-left: 10px;
         margin-top: 20px;
     }
     #lien {
@@ -42,8 +44,7 @@
     }
     .nav {
         font-size: 16px ;
-        margin-right: 15px;
-        margin-left: 25px;
+        margin-left: 10px;
     }
 }
 
